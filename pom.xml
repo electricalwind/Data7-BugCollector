@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>lu.jimenez.research</groupId>
+    <artifactId>data7-bugcollector</artifactId>
+    <version>1.1</version>
+
+    <url>https://github.com/electricalwind/framevpm</url>
+
+
+    <description>A framework for Vulnerability Prediction Modelling</description>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+
+    <properties>
+        <header.path>${basedir}/HEADER</header.path>
+    </properties>
+
+    <developers>
+        <developer>
+            <name>Matthieu Jimenez</name>
+            <id>matthieu.jimenez</id>
+            <email>matthieu.jimenez@uni.lu</email>
+            <roles>
+                <role>admin</role>
+                <role>developer</role>
+            </roles>
+            <timezone>+2</timezone>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <dependency>
+            <groupId>lu.jimenez.research</groupId>
+            <artifactId>data7</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>lu.jimenez.research</groupId>
+            <artifactId>data7-miscUtils</artifactId>
+            <version>1.1</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.2</version>
+                <executions>
+                    <execution>
+                        <id>default-compile</id>
+                        <phase>none</phase>
+                    </execution>
+                    <execution>
+                        <id>default-testCompile</id>
+                        <phase>none</phase>
+                    </execution>
+                    <execution>
+                        <id>compile</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>testCompile</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+                <version>1.16</version>
+                <configuration>
+                    <verbose>false</verbose>
+                    <organizationName>University of Luxembourg, Matthieu Jimenez</organizationName>
+                    <inceptionYear>2018</inceptionYear>
+                    <projectName>Data7</projectName>
+                    <licenseName>apache_v2</licenseName>
+                    <excludes>
+                        <exclude>*.kt</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
