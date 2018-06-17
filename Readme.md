@@ -4,7 +4,7 @@
 ![version](https://img.shields.io/badge/data7-1.1-green.svg)
 ## What is it?
 
-The bug collector package from frameVPM project contains a tool that leverage information gathered by the Data7 tool to create a bug fix dataset. 
+The bug collector package  contains a tool that leverage information gathered by the Data7 tool to create a bug fix dataset. 
 Indeed to retrieve the highest possible number of vulnerabilities in a project, data7 try to link reference of bug id as mentioned in vulnerability report to ones present in commit message. If a match is done then the commit is flagged as vulnerability fix. To prevent from analyzing over and over the same commits and thus provide faster update, a map of bugid to commit is stored in the dataset by the data7 tool.
  This map that was created solely for this purpose can as well allow the creation of a bug fix dataset and that's what this tool offer.
 
